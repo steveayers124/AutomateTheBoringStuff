@@ -13,6 +13,8 @@ guessTooLow = 'Your guess is too low.'
 takeAGuess = 'Take a guess.'
 youGuessed = 'Good job! You guessed my number in '
 
+# Secretly reveal the answer to yourself, hidden from others...
+print('/Volumes/javaDisk/PyNoStarch/AutomateTheBoringStuff/Ch' + str(number) + 'p74.py')
 print(thinkingOfANumber)
 while inputGuess != number:
     print(takeAGuess)
