@@ -2,7 +2,7 @@
 import random
 
 lowerLimit = 1
-upperLimit = 20
+upperLimit = 10
 secretNumber = random.randint(lowerLimit, upperLimit)
 # Secretly reveal the answer to yourself, hidden from others...
 print('/Volumes/javaDisk/PyNoStarch/AutomateTheBoringStuff/Ch' + str(secretNumber) + 'p74.py')
@@ -10,7 +10,7 @@ print('I\'m thinkin\' of a number between ' + str(lowerLimit) + ' and ' + str(up
 print('Take a few guesses.')
 
 # Ask the player to guess 6 times.
-for guessesTaken in range(1, 7):
+for guessesTaken in range(1, 4):
     print('Wha\'d\'ya think?')
     guess = int(input())
 
