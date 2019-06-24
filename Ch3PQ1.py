@@ -18,7 +18,7 @@ print('You enter a number, and I\'ll give the Collatz Sequence for it. This alwa
 seed = 0
 while not (seed > 0):
     try:
-        print('Please enter a number greater than 0.')
+        print('Please enter an integer greater than 0.')
         seed = int(input())
     except ValueError:
         continue
