@@ -17,8 +17,11 @@ print('Welcome to the Collatz Sequence Generator, the World\'s Simplist Impossib
 print('You enter a number, and I\'ll give the Collatz Sequence for it. This always ends in 1.')
 seed = 0
 while not (seed > 0):
-    print('Please enter a number greater than 0.')
-    seed = int(input())
+    try:
+        print('Please enter a number greater than 0.')
+        seed = int(input())
+    except ValueError:
+        continue
 print('- ' + str(seed) + ' - ', sep='', end='')
 # if seed == 1:
 #     exit()
