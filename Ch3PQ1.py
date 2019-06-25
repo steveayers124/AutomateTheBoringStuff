@@ -11,8 +11,8 @@ def collatz(number):
         result = (number * 3) + 1
     return result
 
-print('\n')
-print('=========================================================================================')
+print('\n', end='')
+print('=' * 90)
 print('Welcome to the Collatz Sequence Generator, the World\'s Simplist Impossible Math Problem!')
 print('You enter a number, and I\'ll give the Collatz Sequence for it. This always ends in 1.')
 seed = 0
@@ -22,12 +22,12 @@ while not (seed > 0):
         seed = int(input())
     except ValueError:
         continue
-print('- ' + str(seed) + ' - ', sep='', end='')
+print('- ' + str(seed) + ' - ', end='')
 # if seed == 1:
 #     exit()
 value = seed
 while value != 1:
     value = collatz(value)
-    print(str(value) + ' - ', sep='', end='')
-print('\n=========================================================================================')
-print('\n')
+    print(str(value) + ' - ', end='')
+print('\n' + ('=' * 90))
+print('\n', end='')
