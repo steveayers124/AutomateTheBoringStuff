@@ -11,6 +11,7 @@ print(spam)
 spam = ['a','b','c','d']
 # 3. 
 print(spam[int(int('3' * 2) // 11)])
+print(spam[int('3' * 2) // 11])
 # 4. 
 print(spam[-1])
 # 5. 
