@@ -6,7 +6,7 @@ def collatz(number):
         try:
             result = number // 2
         except ZeroDivisionError:
-            print('Error: diviision by zero')
+            print('Error: division by zero')
     elif remainder == 1:
         result = (number * 3) + 1
     return result
