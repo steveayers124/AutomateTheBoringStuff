@@ -1,7 +1,7 @@
 # List of Green Valley Bible Camp camp songs we know
 import random
 
-gvbcSongBookList = {
+gvbcSongBookDictionary = {
     1: 'A Common Love',
     4: 'All in All',
     9: 'As the Deer (Old)',
@@ -74,5 +74,88 @@ gvbcSongBookList = {
   184: 'You Are the Song that I Sing',
 }
 
-# print(gvbcSongBookList)
-print(gvbcSongBookList[random.randint(0, len(gvbcSongBookList) - 1)])
+# print(gvbcSongBookDictionary)
+# Just guessing: based on the premise that perhaps dictionary acces can be by element number,
+# print(gvbcSongBookDictionary[])
+# for n in range(10):
+#     index = random.randint(0, len(gvbcSongBookDictionary) - 1)
+#     try:
+#         print('gvbcSongBookDictionary')
+#     except:
+
+gvbcSongBookList = [
+	'A Common Love',
+	'All in All',
+	'As the Deer (Old)',
+	'Awesome God',
+	'Battle Belongs to the Lord',
+	'Be Still and Know',
+	'Blue Skies and Rainbows',
+	'Come Let Us Sing',
+	'Create in Me a Clean Heart',
+	'Deep Down in My Heart',
+	'Father I Adore You',
+	'Freely, Freely',
+	'Glorify Thy Name',
+	'God Is So Good',
+	'Greatest Commands',
+	'Have You Seen Jesus My Lord',
+	'He Has Made Me Glad',
+	'He Is My Everything',
+	'He Paid a Debt',
+	'Hear O Israel',
+	'His Name Is Wonderful',
+	'Holy Ground',
+	'Humble Yourself',
+	'I Am Mine Nomore',
+	'I Love You Lord',
+	'We Love You with the Love of the Lord',
+	'I Stand in Awe',
+	'I Want Jesus to Walk with Me',
+	'I Want to Know Christ',
+	'I Will Call upon the Lord',
+	'I\'m Happy Today',
+	'I\'ve Been Crucified with Christ',
+	'I\'ve Got Peace Like a River',
+	'I\'ve Got the Joy',
+	'Jesus Is Lord',
+	'Jesus Keep Me Near the Cross (New)',
+	'Jesus Let Us Come to Know You',
+	'Jesus, Name Above All Names',
+	'Livin\' on the Lord\'s Side',
+	'Lord Be There',
+	'Lord Has a Will',
+	'Lord We Lift Your Name on High',
+	'Love, Love, Love, Love',
+	'Majesty',
+	'Make Me a Servant',
+	'May I Call You Father',
+	'On Bended Knee',
+	'Pass It On',
+	'Pierce My Ear',
+	'Praise the Name of Jesus',
+	'Rejoice in the Lord Always',
+	'Restore My Spirit Lord',
+	'Seek Ye First',
+	'Sing Hallelujah to the Lord',
+	'Someday',
+	'Soon and Very Soon',
+	'Steadfast Love of the Lord',
+	'Step by Step',
+	'Teach Me, Lord, to Wait',
+	'They\'ll Know We Are Christians',
+	'This Is the Day',
+	'Thy Word',
+	'Unto Thee, O Lord',
+	'Victory Chant',
+	'We Bow Down',
+	'We Shall Assemble',
+	'We Will Glorify',
+	'Wonderful, Wonderful',
+	'Worthy Is the Lamb',
+	'You Are the Song that I Sing',
+]
+for n in range(3):
+    index = random.randint(0, len(gvbcSongBookList) - 1)
+    print(gvbcSongBookList[index])
+
