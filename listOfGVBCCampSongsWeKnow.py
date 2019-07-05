@@ -155,6 +155,6 @@ gvbcSongBookList = [
 	'Worthy Is the Lamb',
 	'You Are the Song that I Sing',
 ]
-for n in range(3):
+for n in range(5):
     print(gvbcSongBookList[random.randint(0, len(gvbcSongBookList) - 1)])
 
