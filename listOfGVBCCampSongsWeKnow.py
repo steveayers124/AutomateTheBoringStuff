@@ -78,7 +78,8 @@ gvbcSongBookDictionary = {
 # 
 for n in range(5):
     index = random.randint(0, len(gvbcSongBookDictionary.values()) - 1)
-    print(list(gvbcSongBookDictionary.items())[index])
+    item = list(gvbcSongBookDictionary.items())[index]
+    print(str(item[0]) + "   " + str(item[1]))
 
 gvbcSongBookList = [
 	'A Common Love',
@@ -152,6 +153,6 @@ gvbcSongBookList = [
 	'Worthy Is the Lamb',
 	'You Are the Song that I Sing',
 ]
-for n in range(5):
-    print(gvbcSongBookList[random.randint(0, len(gvbcSongBookList) - 1)])
+# for n in range(5):
+#     print(gvbcSongBookList[random.randint(0, len(gvbcSongBookList) - 1)])
 
