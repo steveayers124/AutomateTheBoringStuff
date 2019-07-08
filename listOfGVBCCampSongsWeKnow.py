@@ -75,13 +75,10 @@ gvbcSongBookDictionary = {
 }
 
 # print(gvbcSongBookDictionary)
-# Just guessing: based on the premise that perhaps dictionary acces can be by element number,
-# print(gvbcSongBookDictionary[])
-# for n in range(10):
-#     index = random.randint(0, len(gvbcSongBookDictionary) - 1)
-#     try:
-#         print('gvbcSongBookDictionary')
-#     except:
+# 
+for n in range(5):
+    index = random.randint(0, len(gvbcSongBookDictionary.values()) - 1)
+    print(list(gvbcSongBookDictionary.items())[index])
 
 gvbcSongBookList = [
 	'A Common Love',
