@@ -81,10 +81,26 @@ for n in range(5):
     item = list(gvbcSongBookDictionary.items())[index]
     print(str(item[0]) + "   " + str(item[1]))
 
-gvbcList = []
-for k, v in gvbcSongBookDictionary.items():
-    gvbcList += [str(k) + "   " + str(v)]
-print(gvbcList)
+# gvbcList = []
+# for k, v in gvbcSongBookDictionary.items():
+#     gvbcList += [str(k) + "   " + str(v)]
+# print(gvbcList)
+
+# Learning to iterate with the multiple assignment trick to compose a list, I found an interesting bug.
+# When the brackets aren't placed arond the item to add to the list, and you just add the string,
+# then the string is converted to a list of letters. That list is added to the list. So each separate
+# symbol in what you intended to be a list item is added as a list item itself. Thus, instead of an
+# iteration over {'one':'red','two':'blue'} yielding ['one red', 'two blue'], it gives
+# ['o', 'n', 'e', ' ', 'r', 'e', 'd', 't', 'w', 'o', ' ', 'b', 'l', 'u', 'e']
+# myNewList = []
+# for k,v in {'one':'red','two':'blue'}.items():
+#     myNewList += [str(k) + " " + str(v)]
+# print(myNewList)
+# myNewList = []
+# for k,v in {'one':'red','two':'blue'}.items():
+#     myNewList += str(k) + " " + str(v)             # This should have been within brackets.
+# print(myNewList)
+# bug doc: to add a string to a list, verify bracket enclosure
 
 gvbcSongBookList = [
 	'A Common Love',
