@@ -10,4 +10,8 @@ for symbol in message:
     count.setdefault(symbol, 0)
     count[symbol] += 1
 
-pprint.pprint(count)
+# pprint.pprint(count)
+
+formatted = pprint.pformat(count)
+
+print(formatted)
