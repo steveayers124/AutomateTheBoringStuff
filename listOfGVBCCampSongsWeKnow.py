@@ -81,6 +81,11 @@ for n in range(5):
     item = list(gvbcSongBookDictionary.items())[index]
     print(str(item[0]) + "   " + str(item[1]))
 
+gvbcList = []
+for k, v in gvbcSongBookDictionary.items():
+    gvbcList += [str(k) + "   " + str(v)]
+print(gvbcList)
+
 gvbcSongBookList = [
 	'A Common Love',
 	'All in All',
