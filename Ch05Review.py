@@ -48,3 +48,35 @@ print('color' not in spam.keys())
 print('color' in spam)
 print('age' in spam)
 
+picnicItems = {'apples':5, 'cups':2}
+print('I am bringing ' + str(picnicItems.get('cups', 0)) + ' cups.')
+print('I am bringing ' + str(picnicItems.get('eggs', 0)) + ' eggs.')
+
+spam = {'name':'Pooka', 'age':5}
+if 'color' not in spam:
+    spam['color'] = 'black'
+print(spam)
+allMyCats = []
+allMyCats += [{'name':'Pooka', 'age':5}]
+allMyCats += [{'name':'Zophie', 'age':7}]
+allMyCats += [{'name':'Simon', 'age':9}]
+allMyCats += [{'name':'Lady Macbeth', 'age':11}]
+allMyCats += [{'name':'Fat-tail', 'age':3}]
+allMyCats += [{'name':'Miss Cleo', 'age':1}]
+print(allMyCats)
+
+allMyCats[0]['color'] = 'black'
+allMyCats[2]['color'] = 'orange tabby'
+allMyCats[5]['color'] = 'tortise'
+print(allMyCats)
+for cat in allMyCats:
+    change = cat.setdefault('color', 'white')
+    if change != 'white': print('Color unchanged for ' + cat.get('name') + '.  Color remains ' + cat['color'] + '.')
+print(allMyCats)
+
+spam.setdefault('color', 'white')
+
+
+
+
+
