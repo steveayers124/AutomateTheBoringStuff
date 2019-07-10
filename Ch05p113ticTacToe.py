@@ -1,16 +1,16 @@
 # begin programming a game of Tic-Tac-Toe
 
 def printboard(board):
-    print(board['top-L'] + '|' + board['top-M'] + '|' + board['top-R'])
+    print(board['A3'] + '|' + board['B3'] + '|' + board['C3'])
     print('-+-+-')
-    print(board['mid-L'] + '|' + board['mid-M'] + '|' + board['mid-R'])
+    print(board['A2'] + '|' + board['B2'] + '|' + board['C2'])
     print('-+-+-')
-    print(board['low-L'] + '|' + board['low-M'] + '|' + board['low-R'])
+    print(board['A1'] + '|' + board['B1'] + '|' + board['C1'])
 
 
-theBoard = {'top-L': ' ', 'top-M': ' ', 'top-R': ' ',
-            'mid-L': ' ', 'mid-M': ' ', 'mid-R': ' ',
-            'low-L': ' ', 'low-M': ' ', 'low-R': ' ', }
+theBoard = {'A3': ' ', 'B3': ' ', 'C3': ' ',
+            'A2': ' ', 'B2': ' ', 'C2': ' ',
+            'A1': ' ', 'B1': ' ', 'C1': ' ', }
 
 turn = 'X'
 for i in range(9):
