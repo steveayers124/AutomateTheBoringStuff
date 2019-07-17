@@ -1,3 +1,5 @@
+#! /Library/Frameworks/Python.framework/Versions/3.6/Resources/Python.app/Contents/MacOS/Python
+
 def printItems(itemsDict, leftWidth, rightWidth):
     print('ITEMS'.center(leftWidth + rightWidth, '-'))
     for k, v in itemsDict.items():
