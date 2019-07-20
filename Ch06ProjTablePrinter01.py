@@ -1,3 +1,4 @@
+#! python3
 # Given a list of a list of strings, each inner list having the same number of items,
 # display all this in a well-organized table, having each column right-justified.
 # Example:
