@@ -83,3 +83,5 @@ phoneRegex = re.compile(r'''(
     \d{4}                          # last 4 digits
     (\s*(ext|x|ext\.)\s*\d{2,5})?  # extension
     )''', re.VERBOSE | re.I)
+line1 = 'Call me at 415-555-1011 tomorrow. 415-555-9999 is my office.'
+print(phoneRegex.findall(line1))
