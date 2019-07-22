@@ -12,13 +12,14 @@ phoneRegex = re.compile(r'''(
     (\s*(ext|x|ext\.)\s*\d{2,5})?  # extension
     )''', re.VERBOSE | re.I)
 
-emailRegex = re.compile(r'''
-    \w+                            # email name
-    @                              # at symbol
-    \w+                            # company
-    \.                             # dot symbol
-    (com|net|org|gov|edu)          # extension
-    ''', re.VERBOSE | re.I)
+emailRegex = re.compile('(\w+)@(\w+)\.(com|net|org|gov|edu)')
+    # (r'''
+    # \w+                            # email name
+    # @                              # at symbol
+    # \w+                            # company
+    # \.                             # dot symbol
+    # (com|net|org|gov|edu)          # extension
+    # ''', re.VERBOSE | re.I)
 line1 = 'Call me at 415-555-1011 tomorrow. 415-555-9999 is my office.'
 print(phoneRegex.findall(line1))
 line2 = 'Email me at adam@cox.net tomorrow. adam@home.com is my office.'
