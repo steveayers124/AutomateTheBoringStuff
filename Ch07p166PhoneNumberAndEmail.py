@@ -22,7 +22,12 @@ emailRegex = re.compile(r'''
 line1 = 'Call me at 415-555-1011 tomorrow. 415-555-9999 is my office.'
 print(phoneRegex.findall(line1))
 line2 = 'Email me at adam@cox.net tomorrow. adam@home.com is my office.'
-print(emailRegex.findall(line2))
+found = emailRegex.search(line2)
+if found is not None:
+    found = found.group()
+else:
+    found = []
+print(str(found) + ', pattern |' + emailRegex.pattern + '|, line |' + line2 + '|')
 
 # TODO: get text to search from clipboard
 
