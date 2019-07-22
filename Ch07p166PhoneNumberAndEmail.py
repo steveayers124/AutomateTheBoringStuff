@@ -12,7 +12,13 @@ phoneRegex = re.compile(r'''(
     (\s*(ext|x|ext\.)\s*\d{2,5})?  # extension
     )''', re.VERBOSE | re.I)
 # TODO: compile an email regex
-
+emailRegex = re.compile(r'''
+    (\w*)                          # email name
+    @                              # at symbol
+    (\w*)                          # company
+    .                              # dot symbol
+    (com|org|gov|edu)              # extension
+    ''')
 
 # TODO: get text to search from clipboard
 
