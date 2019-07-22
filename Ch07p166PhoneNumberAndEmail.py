@@ -13,9 +13,9 @@ phoneRegex = re.compile(r'''(
     )''', re.VERBOSE | re.I)
 
 emailRegex = re.compile(r'''
-    (\w*)                          # email name
+    (\w+)                          # email name
     @                              # at symbol
-    (\w*)                          # company
+    (\w+)                          # company
     \.                             # dot symbol
     (com|net|org|gov|edu)          # extension
     ''')
