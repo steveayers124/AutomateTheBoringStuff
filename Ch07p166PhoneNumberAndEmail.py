@@ -12,28 +12,35 @@ phoneRegex = re.compile(r'''(
     (\s*(ext|x|ext\.)\s*\d{2,5})?  # extension
     )''', re.VERBOSE | re.I)
 
-emailRegex = re.compile('(\w+)@(\w+)\.(com|net|org|gov|edu)')
-    # (r'''
-    # \w+                            # email name
-    # @                              # at symbol
-    # \w+                            # company
-    # \.                             # dot symbol
-    # (com|net|org|gov|edu)          # extension
-    # ''', re.VERBOSE | re.I)
-line1 = 'Call me at 415-555-1011 tomorrow. 415-555-9999 is my office.'
-print(phoneRegex.findall(line1))
-line2 = 'Email me at adam@cox.net tomorrow. adam@home.com is my office.'
-found = emailRegex.search(line2)
-if found is not None:
-    found = found.group()
-else:
-    found = []
-print(str(found) + ', pattern |' + emailRegex.pattern + '|, line |' + line2 + '|')
+emailRegex = re.compile(r'''
+    [a-zA-Z0-9.-_+%]+                            # email name
+    @                              # at symbol
+    [a-zA-Z0-9.-]+                            # domain name
+    (\.[a-zA-Z]{2,4})                             # dot something
+    ''', re.VERBOSE | re.I)
+# line1 = 'Call me at 415-555-1011 tomorrow. 415-555-9999 is my office.'
+# print(phoneRegex.findall(line1))
+# line2 = 'Email me at adam@cox.net tomorrow. adam@home.com is my office.'
+# # found = emailRegex.search(line2)
+# # if found is not None:
+# #     found = found.group()
+# # else:
+# #     found = []
+# # print(str(found) + ', pattern |' + emailRegex.pattern + '|, line |' + line2 + '|')
+# print(emailRegex.findall(line2))
 
-# TODO: get text to search from clipboard
+# Find matches in clipboard text.
+text = str(pyperclip.paste())
+matches = []
+for groups in phoneRegex.findall(text):
+    phoneNum = '-'.join([groups[1], groups[3], groups[5]])
+    if groups[8] != '':
+        phoneNum += ' x' + groups[8]
+    matches.append(phoneNum)
+for groups in emailRegex.findall(text):
+    matches.append(groups[0])
 
-# TODO: search text, capturing phones
-# TODO: search text, capturing emails
+print(matches)
 
 # TODO: put just the phones and emails text to clipboard
 
