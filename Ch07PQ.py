@@ -42,4 +42,23 @@ print(case.get('z', 0))
 # 0
 ###################################
 
-
+whoDoesWhat = re.compile(r'(Alice|Bob|Carol)\s(eats|pets|throws)\s(apples|cats|baseballs)\.', re.I)
+sentences = [
+    'Alice eats apples.',
+    'Bob pets cats.',
+    'Carol throws baseballs.',
+    'Alice throws Apples.',
+    'BOB EATS CATS.',
+    'RoboCop eats apples.',
+    'ALICE THROWS FOOTBALLS.',
+    'Carol eats 7 cats.'
+]
+print('Testing the following lines against the who-does-what sentence testing regex with pattern:')
+print(whoDoesWhat.pattern)
+for line in range(len(sentences)):
+    matchObj = whoDoesWhat.search(sentences[line])
+    if matchObj is not None:
+        printMatch = "That's a perfect match!"
+    else:
+        printMatch = "Sorry. That sentence doesn't match the pattern."
+    print('|' + str(sentences[line]) + '| --> result: ' + printMatch)
