@@ -8,30 +8,12 @@ c = 'RoboCop Nakamoto'
 d = 'Mr. Nakamoto'
 e = 'Nakamoto'
 f = 'Satoshi nakamoto'
+testStrings = [a,b,c,d,e,f]
 
-matchObj = Nakamoto.search(a)
-if matchObj is not None:
-    print('Searching:|'+a+'|\n'+'Name found:|'+matchObj.group()+'|')
-
-matchObj = Nakamoto.search(b)
-if matchObj is not None:
-    print('Searching:|'+a+'|\n'+'Name found:|'+matchObj.group()+'|')
-
-matchObj = Nakamoto.search(c)
-if matchObj is not None:
-    print('Searching:|'+a+'|\n'+'Name found:|'+matchObj.group()+'|')
-
-matchObj = Nakamoto.search(d)
-if matchObj is not None:
-    print('Searching:|'+a+'|\n'+'Name found:|'+matchObj.group()+'|')
-
-matchObj = Nakamoto.search(e)
-if matchObj is not None:
-    print('Searching:|'+a+'|\n'+'Name found:|'+matchObj.group()+'|')
-
-matchObj = Nakamoto.search(f)
-if matchObj is not None:
-    print('Searching:|'+a+'|\n'+'Name found:|'+matchObj.group()+'|')
-
-
+for s in range(len(testStrings)):
+    matchObj = Nakamoto.search(testStrings[s])
+    if matchObj is not None:
+        print('Searching:|'+testStrings[s]+'|\n'+'Name found:|'+matchObj.group()+'|')
+    else:
+        print('Searching:|'+testStrings[s]+'|\n'+'No match with first name was found.')
 
