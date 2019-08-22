@@ -3,6 +3,9 @@
 
 import pyperclip, re
 
+
+# The r preceding the string indicates a literal, (r)eal string. The tripple ', ''', wrap a multiline, and
+# passing the re.VERBOSE flag to re.compile() alerts the function to ignore comments and extraneous white space.
 phoneRegex = re.compile(r'''(
     (\d{3}|\(\d{3}\))?               # area code
     (\s|-|\.)?                       # separator
